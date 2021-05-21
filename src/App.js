@@ -1,23 +1,34 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import './App.css';
+import TextInput from "./components/TextInput/TextInput";
+import TextBlock from "./components/TextBlock/TextBlock";
 
 function App() {
+
+    const [texts, setTexts] = useState([]);
+
+    const Callback = (data) => {
+        if(data === '') {
+            alert('Input something first!');
+        } else {
+            setTexts([...texts, data])
+        }
+
+    }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='AppContainer'>
+        <TextInput callbackFun={Callback}/>
+        <TransitionGroup>
+            {texts.map((text, idx) => (
+                <CSSTransition key={idx} timeout={300} classNames="text">
+                    <TextBlock>
+                        {text}
+                    </TextBlock>
+                </CSSTransition>
+            ))}
+        </TransitionGroup>
     </div>
   );
 }

@@ -1,0 +1,28 @@
+.form {
+  margin: 20px 8px;
+  max-width: 100%;
+
+  .input {
+    resize: none;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 12px;
+  }
+
+  .inputSubmit {
+    width: 100%;
+    padding: 8px;
+    background-color: #ac495f;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    transition: 0.15s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 0.5em 0.5em -0.4em #fc1c4e;
+      transform: translateY(-0.25em);
+      transition: 0.15s ease-in-out;
+    }
+  }
+}
