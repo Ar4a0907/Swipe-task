@@ -6,6 +6,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 npm install react-transition-group --save
 
+npm install react swipe-js-iso react-swipe --save
+
 ## Available Scripts
 
 In the project directory, you can run:
