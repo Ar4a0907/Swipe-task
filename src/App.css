@@ -9,15 +9,32 @@
   }
 }
 
-.AppContainer {
-  max-width: 420px;
-  width: 100%;
-  margin: 0 auto;
-}
-
 .text-enter {
   opacity: 1;
 }
+
 .text-enter-active {
   animation: fadeInLeft 0.3s ease-in-out;
+}
+
+.AppContainer {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  height: 100vh;
+}
+
+.block__TextInput {
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.block__TextInput::-webkit-scrollbar {
+  display: none;
+}
+
+.block__TimeViewer {
+  position: absolute;
+  text-align: center;
+  top: 45vh;
 }
