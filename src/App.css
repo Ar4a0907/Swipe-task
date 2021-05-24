@@ -37,4 +37,5 @@
   position: absolute;
   text-align: center;
   top: 45vh;
+  z-index: 1;
 }
