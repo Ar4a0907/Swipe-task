@@ -26,7 +26,6 @@
 
 .block__TextInput {
   height: 100vh;
-  overflow-y: auto;
 }
 
 .block__TextInput::-webkit-scrollbar {
@@ -37,5 +36,4 @@
   position: absolute;
   text-align: center;
   top: 45vh;
-  z-index: 1;
 }

@@ -20,10 +20,7 @@ function App() {
 
   return (
       <div className='AppContainer'>
-          <ReactSwipe
-              swipeOptions={{ continuous: false }}
-              childCount={2}
-          >
+          <ReactSwipe swipeOptions={{ continuous: false }} >
               <div className='block__TextInput'>
                   <TextInput callbackFun={Callback}/>
                   <TransitionGroup>
